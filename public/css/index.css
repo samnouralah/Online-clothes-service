@@ -1,0 +1,107 @@
+:root {
+  ---color1: #191d88;
+  ---color2: #1450a3;
+  ---color3: #337ccf;
+  ---color4: #ffc436;
+}
+
+/* header */
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+header h1 {
+  font-size: 35px;
+}
+header p {
+  font-size: 20px;
+}
+
+/* khadamat */
+.khadamat {
+  width: 100%;
+  padding: 10px;
+}
+.khadamat h1 {
+  position: relative;
+}
+.khadamat h1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+  background-color: #191d88;
+}
+.khadamat .box-khadamat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 98%;
+  margin: auto;
+}
+.khadamat .box-khadamat div {
+  width: 20%;
+  margin: 20px;
+}
+.khadamat .box-khadamat div img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.khadamat .box-khadamat div p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* mrahel */
+.marahel {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* star */
+.star h1 {
+  position: relative;
+  margin-bottom: 10px;
+}
+.star h1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+  background-color: #191d88;
+}
+.star .box-star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.star .box-star div {
+  width: 20%;
+}
+.star .box-star span {
+  font-size: 115px !important;
+  color: #7592f1;
+}
+.star .box-star h5 {
+  font-size: 22px;
+}
+.star .box-star p {
+  font-size: 18px;
+}

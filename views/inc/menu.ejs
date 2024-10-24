@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/menu.css">
+<div class="menu">
+  <nav>
+    <!-- <div class="logo">
+      <img src="icons8-car-wash-96.png" alt="" srcset="" />
+    </div> -->
+    <ul>
+        <li><a href="/">خانه</a></li>
+      <li>
+        <!-- <span class="material-symbols-outlined"> design_services </span> -->
+        <a href="">خدمات ما</a>
+      </li>
+      <li>
+        <!-- <span class="material-symbols-outlined"> payments </span> -->
+        <a href="">نرخ شست و شو</a>
+      </li>
+      <li>
+        <!-- <span class="material-symbols-outlined"> help </span> -->
+        <a href="/soalat">سوالات متداول</a>
+      </li>
+      <li>
+        <!-- <span class="material-symbols-outlined"> call </span> -->
+        <a href="/tamas">تماس با ما</a>
+      </li>
+    </ul>
+    <% if(user != undefined) {%>
+      <a class="logreg" href="/dashbord"><%= user.username %></a>
+    <% }else{%>
+      <a class="logreg" href="/login">ورود / ثبت نام</a>
+    <% } %>
+    <div class="sefaresh">
+      <a id="btn-sefaresh-telefoni">سفارش تلفنی</a>
+      <a href="/dashbord">سفارش انلاین</a>
+    </div>
+    <div id="sefaresh-telefoni">
+      <span class="material-symbols-outlined" id="close"> close </span>
+      <h3>راه های ارتباطی</h3>
+      <hr />
+      <p>برای ثبت سفارش تلفنی می توانید با این شماره تماس بگیرید</p>
+      <a href="tel:09944576853">09944576853 </a>
+    </div>
+  </nav>
+</div>
+<script src="/js/menu.js"></script>

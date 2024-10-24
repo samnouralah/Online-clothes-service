@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/soalat.css" />
+<h1 class="titles">سوالات پر تکرار شما</h1>
+<% for(const soal of soalat) {%>
+<div class="box-soalat">
+  <p class="title-soalat">
+    <span class="material-symbols-outlined"> add </span>
+    <%= soal.title %>
+  </p>
+  <div class="text">
+    <p>
+     <%= soal.body %>
+    </p>
+  </div>
+</div>
+<% } %>
+<script src="/js/soalat.js"></script>

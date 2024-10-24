@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/tamas.css" />
+<link rel="stylesheet" href="/css/alert.css" />
+<div class="box-tamas">
+  <form action="/tamas" method="post" class="form-tamas">
+    <% if(err.length > 0) {%> <% for(let e of err) {%>
+    <div class="alerter-login bg-r">
+      <p><%= e %></p>
+    </div>
+    <% } %> <% } %> <% if(msg.length > 0) {%>
+    <div class="alerter-login bg-g">
+      <p><%= msg %></p>
+    </div>
+    <% } %>
+    <h1>راه ارتباطی</h1>
+    <input type="text" placeholder="اسم شما" name="name" />
+    <input type="email" placeholder="ایمیل شما" required name="email" />
+    <textarea placeholder="متن شما" name="text"></textarea>
+    <button>ارسال</button>
+  </form>
+  <div class="box-etla">
+    <div>
+      <p>
+        <span class="material-symbols-outlined"> pin_drop </span>
+        ادرس
+      </p>
+      <p>
+        تهران اشرفی اصفهانی به سمت شمال، قبل از پل همت، خیابان قموشی، بلوار
+        عربشاهی(هما)، بن بست سوده، پلاک 4/8، طبقه منفی 1
+      </p>
+    </div>
+    <div>
+      <p>
+        <span class="material-symbols-outlined"> call </span>
+        تلفن
+      </p>
+      <p>09944576853</p>
+    </div>
+  </div>
+</div>

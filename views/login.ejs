@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/login.css" />
+<div class="contener font-vazir">
+  <h1>خوش اومدید</h1>
+  <% if(msg.length > 0) {%>
+  <div class="alerter-login bg-g">
+    <p><%= msg %></p>
+  </div>
+  <% } %>
+  <% if(err.length > 0) {%>
+  <div class="alerter-login bg-r">
+    <p><%= err %></p>
+  </div>
+  <% } %>
+  <form action="/login" method="post">
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="ایمیل خود را واردکنید"
+      class="font-vazir"
+    />
+    <div class="inputPassword font-vazir">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        placeholder="رمز عبور خود را واردکنید"
+        class="font-vazir"
+      />
+      <span class="material-symbols-outlined eye"> visibility_off </span>
+    </div>
+    <div class="spordan">
+      <label for="spordan">مرا به خاطر بسپار</label>
+      <input name="remmber" type="checkbox" name="" id="spordan" />
+    </div>
+    <input type="submit" value="ورود" class="font-vazir" />
+    <br />
+    <div class="action">
+      <a href="/register">اکانت ندارید ؟!</a>
+    </div>
+  </form>
+  <script src="/js/inputPassword.js"></script>
+</div>

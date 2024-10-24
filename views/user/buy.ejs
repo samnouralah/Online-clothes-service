@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/css/buy.css" />
+<link rel="stylesheet" href="/css/alert.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+/>
+<div class="box-buy">
+  <% for(let e of err) {%>
+    <div class="alerter-login bg-r">
+      <p><%= e %></p>
+    </div>
+  <% } %>
+  <div class="cart">
+    <% for(let p of cart) {%>
+    <div class="box-cart" data-id="<%= p.id %>">
+      <div>
+        <img src="/uploads/<%= p.image %>" alt="" />
+      </div>
+      <div class="text">
+        <p><%= p.name %></p>
+        <p>قیمت هر اتو: <%= func(p.ironPrice) %></p>
+        <p>قیمت هر شست و شو: <%= func(p.washingPrice) %></p>
+
+        <p
+          class="price-cart"
+          data-price="<%= (p.ironPrice * user.cart.find(c => c.id ==
+          p.id).iron) + (p.washingPrice * user.cart.find(c => c.id ==
+          p.id).washing) %>"
+        >
+          قیمت کل: <%= func((p.ironPrice * user.cart.find(c => c.id ==
+          p.id).iron) + (p.washingPrice * user.cart.find(c => c.id ==
+          p.id).washing))%>
+        </p>
+      </div>
+      <div class="div-delete">
+        <a href="/dashbord/deleteCart/<%= p.id %>"
+          ><span class="material-symbols-outlined"> delete </span></a
+        >
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+  <form action="/dashbord/handelBuy" method="post">
+    <input type="text" placeholder="اسم شما" class="inputn" name="name" />
+    <input
+      type="number"
+      name="phone"
+      class="inputn"
+      placeholder="شماره تلفن شما"
+    />
+
+    <div class="locat">
+      <p class="box-title">
+        محل دریافت
+        <span class="material-symbols-outlined"> local_shipping </span>
+      </p>
+      <div id="map"></div>
+      <input
+        type="text"
+        placeholder="متنی برای پیدا کردن راحت تر ادرس"
+        class="input-locat"
+        name="locatText"
+      />
+    </div>
+
+    <div class="set-time">
+      <p class="box-title">
+        زمان دریافت
+        <span class="material-symbols-outlined"> schedule </span>
+      </p>
+      <br />
+      <div class="days">
+        <div class="day">شنبه</div>
+        <div class="day">دوشنبه</div>
+        <div class="day">چهارشنبه</div>
+      </div>
+      <div class="time">
+        <div class="items at">
+          <span></span>
+          <span dir="rtl">16 تا 18 </span>
+        </div>
+      </div>
+
+      <p class="result"></p>
+    </div>
+
+    <div class="sefaresh">
+      <h3 id="priceSum"></h3>
+      <button type="submit">ثبت سفارش</button>
+    </div>
+  </form>
+</div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="/js/buy.js"></script>

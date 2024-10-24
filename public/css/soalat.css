@@ -1,0 +1,113 @@
+.titles {
+  margin-top: 50px;
+  text-align: center;
+}
+.box-soalat {
+  cursor: pointer;
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+  margin-top: 25px;
+  height: 53px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.hauto {
+  height: auto !important;
+}
+.title-soalat {
+  font-size: 20px !important;
+  display: flex;
+  align-items: center;
+}
+.title-soalat::selection {
+  color: #000;
+}
+.title-soalat span {
+  color: brown !important;
+}
+.text {
+  margin-top: 10px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+/* dashbord */
+.box-table {
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: right;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+th {
+  background-color: #333;
+  color: white;
+}
+#add::selection {
+  color: #fff;
+}
+#add {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px !important;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.add-soal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.add-soal input, textarea{
+  display: block;
+  margin: auto;
+  padding: 5px;
+  width: 300px;
+  margin-top: 15px;
+  border-radius: 7px;
+  border: 2px solid #333;
+  outline: none;
+  resize: none;
+  overflow: auto;
+}
+.add-soal button{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #333;
+  border: 2px solid #333;
+  color: #fff;
+  border-radius: 5px;
+}
+#cancel{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+#cancel::selection{
+  cursor: pointer;
+}

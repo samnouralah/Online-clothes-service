@@ -1,0 +1,95 @@
+/* menu */
+.menu-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 250px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  direction: ltr;
+}
+.menu-user .item-menu a {
+  cursor: pointer;
+}
+.menu-user .item-menu a span {
+  color: #333;
+  font-size: 25px !important;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+}
+.menu-user .item-menu a span::selection {
+  color: #333;
+}
+.active {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* waper */
+.waper {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  width: 950px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 15px;
+  border-radius: 15px;
+}
+.waper .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.waper .profile .bio {
+  display: flex;
+  align-items: center;
+}
+.waper .profile .bio .img {
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.waper .controller {
+  width: 90%;
+  margin: auto;
+}
+.waper .controller .title-box {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.waper .item-controller{
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+  border: 2px solid #0cafcc;
+  padding: 10px;
+  color:  #0cafcc;
+  cursor: pointer;
+}
+.waper .item-controller div{
+  display: flex;
+  font-size: 15px;
+}
+.waper .item-controller div a{
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+.waper div.logout{
+  background-color: rgb(230, 119, 119);
+  border-color: rgb(230, 119, 119);
+}
+.waper div.logout a{
+  color: #fff;
+}

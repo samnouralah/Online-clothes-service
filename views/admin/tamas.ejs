@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css/payam.css">
+<% for(let payam of payams) {%>
+    <div class="box-payam">
+        <div>
+            <p><%= payam.name %></p>
+            <p><%= payam.email %></p>
+            <p><%= funDate(payam.createAt) %></p>
+            <a href="/dashbord/tamas/delete/<%= payam.id %>">حذف پیام</a>
+        </div>
+        <br>
+        <p><%= payam.text %></p>
+    </div>
+<% } %>

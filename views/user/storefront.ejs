@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/userProduct.css" />
+<link rel="stylesheet" href="/css/alert.css" />
+<div class="box">
+  <% if(err.length > 0) {%>
+    <div class="alerter-login bg-r">
+      <p><%= err %></p>
+    </div>
+    <% } %>
+  <div class="product">
+    <% for(let product of products) {%>
+    <div class="box-product" data-id="<%= product.id %>">
+      <img src="/uploads/<%= product.image %>" alt="" />
+      <h3><%= product.name%></h3>
+      <br />
+      <div>
+        <div>
+          <div class="name">
+            <span class="material-symbols-outlined">
+              local_laundry_service
+            </span>
+            شست و شو با اتو (<%= product.washingPrice %>)
+            <br />
+          </div>
+          <div class="box-number">
+            <figure class="btn-number add">
+              <span class="material-symbols-outlined"> add </span>
+            </figure>
+            <% try { %> <% let w = user.cart.find(item => product.id ==
+            item.id).washing %>
+            <span id="washing" class="<%= product.id+'w' %>"><%= w %></span>
+            <% }catch (error) { %>
+            <span id="washing" class="<%= product.id+'w' %>">0</span>
+            <% } %>
+            <figure class="btn-number">
+              <span class="material-symbols-outlined small">
+                check_indeterminate_small
+              </span>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <div class="name">
+            <span class="material-symbols-outlined"> iron </span>
+            اتو (<%= product.ironPrice %>)
+            <br />
+          </div>
+          <div class="box-number">
+            <figure class="btn-number add">
+              <span class="material-symbols-outlined"> add </span>
+            </figure>
+            <% try { %> <% let i = user.cart.find(item => product.id ==
+            item.id).iron %>
+            <span id="iron" class="<%= product.id+'i' %>"><%= i %></span>
+            <% }catch (error) { %>
+            <span id="iron" class="<%= product.id+'i' %>">0</span>
+            <% } %>
+            <figure class="btn-number">
+              <span class="material-symbols-outlined small">
+                check_indeterminate_small
+              </span>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <a class="sefaresh" href="/dashbord/buy">
+    ادامه خرید
+    <span class="material-symbols-outlined"> arrow_back_ios </span>
+  </a>
+</div>
+
+<script src="/js/store.js"></script>

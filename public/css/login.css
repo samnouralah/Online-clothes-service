@@ -1,0 +1,102 @@
+body {
+  background-color: #f5f5f5;
+}
+div.contener {
+  display: flex;
+  height: 98vh !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+form {
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #fff;
+}
+form input[type="email"],
+form input[type="text"],
+form input[type="password"] {
+  display: block;
+  margin: auto;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: 2px solid #f5f5f5;
+  width: 95%;
+  margin-bottom: 15px;
+  outline: none;
+  background-color: #f5f5f5;
+  transition: 0.5s;
+}
+form input[type="email"]:focus,
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  background-color: #fff;
+}
+form input[type="submit"] {
+  display: block;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #337ccf;
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin-top: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+form input[type="submit"]:hover {
+  background-color: #f2f2f2;
+  color: #337ccf;
+}
+form a {
+  display: block;
+  margin-top: 10px;
+}
+.inputPassword {
+  position: relative;
+}
+.inputPassword span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 11px;
+  cursor: pointer;
+  color: #333;
+}
+.inputPassword span::selection {
+  color: #333;
+}
+.action a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s;
+}
+.action a:hover {
+  color: #337ccf;
+}
+.spordan {
+  display: flex;
+  align-items: center;
+}
+
+/* aler login */
+.alerter-login {
+  padding: 10px;
+  text-align: center;
+  border-radius: 7px;
+  color: #fff;
+  margin: 10px;
+}
+.bg-g {
+  background-color: #2e8176;
+}
+.bg-r {
+  background-color: brown;
+}

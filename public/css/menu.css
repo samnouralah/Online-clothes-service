@@ -1,0 +1,130 @@
+:root {
+  ---color1: #191d88;
+  ---color2: #1450a3;
+  ---color3: #337ccf;
+  ---color4: #ffc436;
+}
+
+
+.menu {
+  display: block;
+  width: 100%;
+  font-family: vazir;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.menu nav .logo {
+  margin-left: 20px;
+}
+
+.menu nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 60%;
+  cursor: pointer;
+}
+.menu nav ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+.menu nav ul li a::selection {
+  text-decoration: none;
+}
+.menu nav ul li::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  border-radius: 30px;
+  background-color: var(---color2);
+  transition: 0.5s;
+}
+.menu nav ul li::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  border-radius: 30px;
+  background-color: var(---color2);
+  transition: 0.5s;
+}
+.menu nav ul li:hover::after {
+  width: 100%;
+}
+.menu nav ul li:hover::before {
+  width: 100%;
+}
+.menu nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+
+.menu nav a.logreg {
+  margin-left: 15px;
+  text-decoration: none;
+  border: 2px solid var(---color3);
+  padding: 10px 15px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: var(---color3);
+  transition: 0.5s;
+}
+.menu nav .sefaresh a {
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 10px;
+  background-color: var(---color3);
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#sefaresh-telefoni {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+}
+#sefaresh-telefoni span {
+  color: brown;
+  cursor: pointer;
+  position: absolute;
+}
+#sefaresh-telefoni span::selection {
+  color: brown;
+}
+#sefaresh-telefoni h3 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 10px;
+}
+#sefaresh-telefoni p {
+  font-size: 23px;
+}
+#sefaresh-telefoni a {
+  display: flex;
+  font-size: 25px;
+  text-align: center;
+}

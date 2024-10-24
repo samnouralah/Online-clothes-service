@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/css/baresi.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+/>
+<% for(let sefaresh of sefareshha) {%>
+<div class="sefaresh">
+  <div>
+    <p class="title-box-info">اطلاعت کاربر</p>
+    <p><%= sefaresh.name %></p>
+    <p><%= sefaresh.phone %></p>
+    <div id="<%= sefaresh.id %>"></div>
+    <p><%= sefaresh.locatText %></p>
+    <a href="/dashbord/sefaresh/locat/<%= sefaresh.id %>"
+      >نمایش مکان کاربر با GPS</a
+    >
+    <p><%= sefaresh.day %> ساعت <%= sefaresh.time %></p>
+  </div>
+
+  <div>
+    <p class="title-box-info">لیست سفارش ها</p>
+    <% for(let s of sefaresh.cart) {%> <% let info = func(s.id) %>
+    <div>
+      <p class="title-product"><%= info.name %></p>
+      <div>
+        <p class="price-product">اتو(<%= info.ironPrice %>) <%= s.iron %></p>
+        <p class="price-product">
+          شست و شو(<%= info.washingPrice %>) <%= s.washing %>
+        </p>
+      </div>
+    </div>
+    <% } %> <% let sum = 0 %> <% for(let s of sefaresh.cart) {%> <% let info =
+    func(s.id) %> <% sum+= info.ironPrice * s.iron %> <% sum+= info.washingPrice
+    * s.washing %> <% } %>
+    <b><%= sum %></b>
+  </div>
+
+  <div class="action">
+    <p class="title-box-info">عملیات ها</p>
+    <a href="/dashbord/sefaresh/sendToAmjamShode/<%= sefaresh.id %>"
+      >پایان (انجام شده)</a
+    >
+    <a href="/dashbord/sefaresh/delete/<%= sefaresh.id %>"
+      >حذف کامل (بدون بازگشت)</a
+    >
+    <a href="">حذف کردن یوزر ارسال کننده این درخواست (بدون بازگشت)</a>
+  </div>
+</div>
+<% } %>

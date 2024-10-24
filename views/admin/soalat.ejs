@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/css/soalat.css" />
+<div class="box-table">
+  <table>
+    <tr>
+      <th>سوال</th>
+      <th>پاسخ</th>
+      <th>عملیات</th>
+    </tr>
+    <% for(const soal of solats){%>
+        <tr>
+            <td>
+                <%= soal.title %>
+            </td>
+            <td>
+                <%= soal.body %>
+            </td>
+            <td>
+                <a href="/dashbord/soalat/delete/<%= soal.id %>">حذف</a>
+            </td>
+        </tr>
+    <% } %>
+  </table>
+</div>
+<span class="material-symbols-outlined" id="add"> add </span>
+<div class="add-soal">
+  <p>اضافه کردن سوال جدید</p>
+  <span class="material-symbols-outlined" id="cancel"> cancel </span>
+  <form action="/dashbord/soalat/add" method="post">
+    <input type="text" placeholder="سوال" required name="title" />
+    <textarea type="text" placeholder="پاسخ" name="body"></textarea>
+    <button>اضافه کردن</button>
+  </form>
+</div>
+<script>
+  const btnAdd = document.getElementById("add");
+  const boxAdd = document.querySelector(".add-soal");
+  const closeBtn = document.getElementById("cancel");
+
+  btnAdd.addEventListener("click", (event) => {
+    boxAdd.style.display = "block";
+  });
+  closeBtn.addEventListener("click", (event) => {
+    boxAdd.style.display = "none";
+  });
+</script>

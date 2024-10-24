@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="/css/dashbord.css" />
+    <link rel="stylesheet" href="/css/dashbord-user.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.1/ckeditor.js"
+      integrity="sha512-aThGT4RJc95+zt2vrs8iMjrFpsJxcFclp7tweVls6/3cNo3GWvGvtLV576o8Kdvdf3fJhrrG3wkmoea/KJMLFQ=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <% if(user.admin) {%>
+    <div class="dashbord">
+      <div class="menu">
+        <div class="title">
+          <h1>سلام <%= user.username %></h1>
+        </div>
+        <div class="abzar">
+          <ul class="ul-abzar">
+            <li class="title-abzar"><a href="/dashbord">داشبورد</a></li>
+            <li class="title-abzar">
+              <a href="/dashbord/soalat">سوالات متداول</a>
+            </li>
+            <li class="title-abzar">
+              <a href="/dashbord/khabarName">خبر نامه</a>
+            </li>
+            <li class="title-abzar"><a href="/dashbord/tamas">پیام ها</a></li>
+            <li class="abzar-nav title-abzar">
+              محصولات
+              <span class="material-symbols-outlined"> arrow_back_ios </span>
+              <ul>
+                <li><a href="/dashbord/product/add">ساخت محصول جدید</a></li>
+                <li><a href="/dashbord/product">لیست محصولات</a></li>
+              </ul>
+            </li>
+            <li class="abzar-nav title-abzar">
+              سفارش ها
+              <span class="material-symbols-outlined"> arrow_back_ios </span>
+              <ul>
+                <li><a href="/dashbord/sefaresh/baresi">نیاز به برسی</a></li>
+                <li><a href="/dashbord/sefaresh/hamvanagl">حمل و نقل</a></li>
+                <li><a href="/dashbord/sefaresh/darhamvanagl">درحال انجام</a></li>
+                <li><a href="/dashbord/sefaresh/anjamshode">انجام شده ها</a></li>
+              </ul>
+            </li>
+            <li class="title-abzar">
+              <a href="/dashbord/logout">خروج</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <main><%- body %></main>
+    </div>
+    <script src="/js/dashbord.js"></script>
+    <% }else{ %>
+    <div class="menu-user">
+      <div class="item-menu">
+        <a href="/dashbord"
+          ><span class="<%= path == "/dashbord" ? 'active' : ''%> material-symbols-outlined"> person </span></a
+        >
+      </div>
+      <div class="item-menu">
+        <a href=""
+          ><span class=" material-symbols-outlined"> lab_profile </span></a
+        >
+      </div>
+      <div class="item-menu">
+        <a href="/dashbord/storefront"
+          ><span class="<%= path == "/storefront" ? 'active' : '' %> material-symbols-outlined"> storefront </span></a
+        >
+      </div>
+    </div>
+    <div class="waper">
+      <%- body %>
+    </div>
+    <% } %>
+  </body>
+</html>

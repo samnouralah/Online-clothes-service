@@ -1,0 +1,59 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 30px 30px 0 0;
+  padding: 15px;
+  width: 100%;
+  background: #f2f2f2;
+}
+footer .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  margin-right: 50px;
+}
+footer .link ul {
+  list-style-type: none;
+}
+footer .link ul li {
+  margin: 5px;
+}
+footer .link ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s;
+}
+
+footer .ozviat {
+  width: 53%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .ozviat form {
+  width: 100%;
+}
+footer .ozviat input {
+  padding: 10px;
+  font-size: 18px;
+  display: inline-block;
+  width: 70%;
+  border: 2px solid #7592f1;
+  border-radius: 7px;
+  outline: none;
+}
+footer .ozviat button {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #ccc;
+}
+.bag {
+  background-color: #7592f1 !important;
+  cursor: pointer;
+}

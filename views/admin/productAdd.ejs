@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/productAdd.css" />
+<link rel="stylesheet" href="/css/alert.css" />
+<form action="/dashbord/product/add" method="post" id="form">
+  <% if(msg.length > 0) { %>
+    <div class="alerter-login bg-g"><%= msg %></div>
+  <% } %>
+  <% if(err.length > 0) { %>
+    <% for(let e of err) {%>
+      <div class="alerter-login bg-r"><%= e %></div>
+    <% } %>
+  <% } %>
+  <div class="upload-image">
+    <label for="selecteImage" id="statusImage">عکس خود را انتخاب کنید </label>
+    <button type="button" id="btnUploder">اپلود عکس</button>
+    <input type="file" id="selecteImage" name="image" />
+  </div>
+
+  <div id="boxLoader" style="display: none">
+    <div id="loader">
+      <div id="load">0%</div>
+    </div>
+    <br /><br />
+  </div>
+
+  <input type="text" placeholder="اسم محصول" name="nameProduct" />
+
+  <div class="price">
+    <div>
+      <label for="iron-price">قیمت اتو</label>
+      <input type="text" id="iron-price" name="ironPrice" />
+    </div>
+    <br />
+    <div>
+      <label for="washing-price">قیمت شست و شو</label>
+      <input type="text" id="washing-price" name="washingPrice" />
+    </div>
+  </div>
+
+  <button type="submit">ثبت</button>
+</form>
+<script src="/js/productAdd.js"></script>

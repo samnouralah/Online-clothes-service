@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/khabarName.css" />
+<h1 class="title-khabarName"><%= count %> ایمیل در خبر نامه ثبت شده است</h1>
+<form method="post" action="/dashbord/khabarName">
+  <div class="box-textarea">
+    <textarea name="text" placeholder="متن خبر را بنویسید"></textarea>
+  </div>
+  <button>ارسال</button>
+</form>
+<br /><br />
+<div class="box-email">
+  <% for(const email of emails) {%>
+  <p><%= email.email %></p>
+  <% } %>
+</div>
+<script>
+  CKEDITOR.replace("text", {
+    language: "fa",
+  });
+</script>

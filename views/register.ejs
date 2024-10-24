@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/css/login.css" />
+<div class="contener font-vazir">
+  <h1>ثبت نام</h1>
+  <% for(let e of err) {%>
+    <div class="alerter-login bg-r">
+      <p><%= e %></p>
+    </div>
+  <% } %>
+  <form action="/register" method="post">
+    <input
+      type="text"
+      name="username"
+      required
+      placeholder="نام کاربری شما"
+      class="font-vazir"
+    />
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="ایمیل خود را واردکنید"
+      class="font-vazir"
+    />
+    <div class="inputPassword font-vazir">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        required
+        placeholder="رمز عبور خود را واردکنید"
+        class="font-vazir"
+      />
+      <span class="material-symbols-outlined eye"> visibility_off </span>
+    </div>
+    <div class="inputPassword font-vazir">
+      <input
+        type="password"
+        name="confirmPassword"
+        id="password"
+        required
+        placeholder="رمز عبور خود را واردکنید"
+        class="font-vazir"
+      />
+      <span class="material-symbols-outlined eye"> visibility_off </span>
+    </div>
+    <input type="submit" value="ثبت نام" class="font-vazir" />
+  </form>
+  <script src="/js/inputPassword.js"></script>
+</div>
